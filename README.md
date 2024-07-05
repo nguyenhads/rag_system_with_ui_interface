@@ -143,8 +143,8 @@ Ask any question and receive answers from our powerful AI.
 
 - [LangChain](https://github.com/langchain-ai/langchain)
 - [Streamlit](https://www.streamlit.io/)
+- [Chainlit](https://docs.chainlit.io/get-started/overview)
 - [Pinecone](https://www.pinecone.io/)
-- [Streamlit](https://docs.streamlit.io/)
 
 ## License
 
