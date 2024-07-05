@@ -24,6 +24,8 @@ graph TD
 6. **Context and Question**: The context retrieved from the VectorDB and the user's question.
 7. **LLM (Large Language Model)**: Processes the context and question to generate an answer.
 
+   ※ _Interface of this flow was build by Streamlit and Chainlit_
+
 ## Demo
 
 ### Smart Document Query System
@@ -69,7 +71,7 @@ Ask any question and receive answers from our powerful AI.
 │   └── 1_GeminiChatBot.py              # Streamlit page for the Gemini Assistant Chatbot
 ├── requirements.txt                    # List of project dependencies
 └── src
-    ├── build_db.py                     # Script to build the vector database
+    ├── build_db.py                     # Script to build the vector database by Pinecone
     ├── const.py                        # File containing project constants
     ├── document_loaders
     │   ├── base.py                     # Base class for document loaders
@@ -82,9 +84,9 @@ Ask any question and receive answers from our powerful AI.
     ├── splitters
     │   └── text_splitter.py            # Script for splitting text into chunks
     └── vector_db
-        ├── base.py           # Base class for vector databases
-        ├── chroma_db.py      # Chroma vector database implementation
-        └── base.py           # Base class for vector databases
+        ├── base.py                     # Base class for vector databases
+        ├── chroma_db.py                # Chroma vector database class
+        └── pinecone_db.py              # Pincecone vector databases class
 ```
 
 ## How to Run
