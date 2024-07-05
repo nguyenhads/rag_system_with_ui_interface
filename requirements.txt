@@ -1,0 +1,12 @@
+chainlit==1.1.306
+streamlit-chat==0.1.1
+langchain==0.2.6
+langchain-community==0.2.6
+langchain-openai==0.1.14
+langchain-chroma==0.1.2
+langchain-google-genai==1.0.7
+langchain-pinecone==0.1.1
+streamlit-chat==0.1.1
+langchainhub==0.1.20
+python-dotenv==1.0.1
+pypdf==4.2.0
