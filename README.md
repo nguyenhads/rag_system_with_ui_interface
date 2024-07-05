@@ -67,6 +67,8 @@ Ask any question and receive answers from our powerful AI.
 │   ├── demo_smart_document_query_st_ui.png   # Image for the Smart Document Query system demo - Streamlit Interface
 │   ├── demo_smart_document_query_cl_ui.png   # Image for the Smart Document Query system demo - Chainlit Interface
 │   └── gemini_assistant_chatbot_01.png       # Image for the Gemini Assistant Chatbot demo
+├── notebooks
+│   └── chatbot_using_rag.ipynb        # Notebooks to build RAG using Vicuna OS model
 ├── pages
 │   └── 1_GeminiChatBot.py              # Streamlit page for the Gemini Assistant Chatbot
 ├── requirements.txt                    # List of project dependencies
