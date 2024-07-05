@@ -48,6 +48,7 @@ Ask any question and receive answers from our powerful AI.
 
 ```
 .
+├── LICENSE                             # MIT license
 ├── README.md                           # Project overview and instructions
 ├── SmartDocumentQueryST.py             # Main script for the Smart Document Query system - Streamlit Interface
 ├── SmartDocumentQueryCL.py             # Main script for the Smart Document Query system - Chainlit Interface
@@ -61,9 +62,9 @@ Ask any question and receive answers from our powerful AI.
 ├── icons
 │   └── chatbot.png                     # Icon for the chatbot
 ├── images
-│   ├── demo_smart_document_query_st_ui.png # Image for the Smart Document Query system demo - Streamlit Interface
-│   ├── demo_smart_document_query_cl_ui.png # Image for the Smart Document Query system demo - Chainlit Interface
-│   └── gemini_assistant_chatbot_01.png     # Image for the Gemini Assistant Chatbot demo
+│   ├── demo_smart_document_query_st_ui.png   # Image for the Smart Document Query system demo - Streamlit Interface
+│   ├── demo_smart_document_query_cl_ui.png   # Image for the Smart Document Query system demo - Chainlit Interface
+│   └── gemini_assistant_chatbot_01.png       # Image for the Gemini Assistant Chatbot demo
 ├── pages
 │   └── 1_GeminiChatBot.py              # Streamlit page for the Gemini Assistant Chatbot
 ├── requirements.txt                    # List of project dependencies
@@ -92,6 +93,7 @@ Ask any question and receive answers from our powerful AI.
 
 - Python 3.8+
 - Streamlit
+- Chainlit
 - LangChain
 - Pinecone
 
@@ -100,8 +102,8 @@ Ask any question and receive answers from our powerful AI.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/acn-thaihanguyen/rag_langchain.git
-   cd rag_langchain
+   git clone https://github.com/nguyenhads/rag_system_with_ui_interface.git
+   cd rag_system_with_ui_interface
    ```
 
 2. Create a virtual environment and install the required packages:
@@ -116,15 +118,20 @@ Ask any question and receive answers from our powerful AI.
 
    - Sign up at [Pinecone](https://www.pinecone.io/) and get your API key.
    - Create an index on Pinecone for storing document embeddings.
+   - Update `src\const.py` with your INDEX_NAME, NAME_SPACE (optinal)
 
 4. Set up your environment variables:
 
    - Create a `.env` file in the project root and add your OpenAI and Pinecone API keys (examples provided in .env.sample)
 
    ```bash
+   # API keys
    OPENAI_API_KEY=your-openai-api-key
    PINECONE_API_KEY=your-pinecone-api-key
    GOOGLE_API_KEY=your-google-api-key
+
+   #Python Path
+   PYTHONPATH=/path/to/src/folder
    ```
 
 5. Build a vector store DB using Pinecone
@@ -133,10 +140,12 @@ Ask any question and receive answers from our powerful AI.
    python src/build_db.py <folder_containing_pdf_files>
    ```
 
-6. Running a streamlit app
+6. Running a Streamlit app or Chainlit app
 
    ```
-   streamlit run SmartDocumentQuery.py
+   streamlit run SmartDocumentQueryST.py
+
+   chainlit run SmartDocumentQueryCL.py
    ```
 
 ## Acknowledgements
